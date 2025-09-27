@@ -1,0 +1,43 @@
+pahim_b:~$ mkdir my_folder
+pahim_b:~$ ls
+my_folder
+pahim_b:~$ cd \my_folder
+pahim_b:~/my_folder$ echo "I am Pahim, This is my first File" > my_file.txt
+pahim_b:~/my_folder$ ls
+my_file.txt
+pahim_b:~/my_folder$ ls -l
+total 4
+-rw-r--r-- 1 pahim_b pahim_b 34 Sep 27 12:39 my_file.txt
+pahim_b:~/my_folder$ echo "I am Pahim. Learning the Linux,This is my second File" > another_file.txt
+pahim_b:~/my_folder$ ls
+another_file.txt  my_file.txt
+pahim_b:~/my_folder$ cat another_file.txt >> my_file.txt
+pahim_b:~/my_folder$ ls
+another_file.txt  my_file.txt
+pahim_b:~/my_folder$ cat my_file.txt
+I am Pahim, This is my first File
+I am Pahim. Learning the Linux,This is my second File
+pahim_b:~/my_folder$ ls -l
+total 8
+-rw-r--r-- 1 pahim_b pahim_b 54 Sep 27 12:41 another_file.txt
+-rw-r--r-- 1 pahim_b pahim_b 88 Sep 27 12:42 my_file.txt
+pahim_b:~/my_folder$ touch file_{1..20}.txt
+pahim_b:~/my_folder$ ls
+another_file.txt  file_10.txt  file_12.txt  file_14.txt  file_16.txt  file_18.txt  file_2.txt   file_3.txt  file_5.txt  file_7.txt  file_9.txt
+file_1.txt        file_11.txt  file_13.txt  file_15.txt  file_17.txt  file_19.txt  file_20.txt  file_4.txt  file_6.txt  file_8.txt  my_file.txt
+pahim_b:~/my_folder$ for i in {1..5}; do mv file_${i}.txt file_${i}.yml; done
+pahim_b:~/my_folder$ ls -lt | head -5
+total 8
+-rw-r--r-- 1 pahim_b pahim_b  0 Sep 27 12:54 file_1.yml
+-rw-r--r-- 1 pahim_b pahim_b  0 Sep 27 12:54 file_10.txt
+-rw-r--r-- 1 pahim_b pahim_b  0 Sep 27 12:54 file_11.txt
+-rw-r--r-- 1 pahim_b pahim_b  0 Sep 27 12:54 file_12.txt
+pahim_b:~/my_folder$ ls
+another_file.txt  file_10.txt  file_12.txt  file_14.txt  file_16.txt  file_18.txt  file_2.yml   file_3.yml  file_5.yml  file_7.txt  file_9.txt
+file_1.yml        file_11.txt  file_13.txt  file_15.txt  file_17.txt  file_19.txt  file_20.txt  file_4.yml  file_6.txt  file_8.txt  my_file.txt
+pahim_b:~/my_folder$ ls -t | head -5
+file_1.yml
+file_10.txt
+file_11.txt
+file_12.txt
+file_13.txt
