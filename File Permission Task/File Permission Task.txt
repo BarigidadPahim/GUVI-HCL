@@ -1,0 +1,19 @@
+pahim_b:~$ ls
+app.py     error.txt   file2.txt    fruits.txt  my_fruit.txt  number.txt  prawn.txt    veg-item
+chees.txt  error1.txt  fish.txt     learning    nonveg-item   okra.txt    spinach.txt
+crab.txt   file1.txt   food-backup  my_folder   note.txt      output.txt  text.yaml
+pahim_b:~$ mkdir home
+pahim_b:~$ ls
+app.py     error.txt   file2.txt    fruits.txt  my_folder     note.txt    output.txt   text.yaml
+chees.txt  error1.txt  fish.txt     home        my_fruit.txt  number.txt  prawn.txt    veg-item
+crab.txt   file1.txt   food-backup  learning    nonveg-item   okra.txt    spinach.txt
+pahim_b:~$ cd home/
+pahim_b:~/home$ touch demo.txt
+pahim_b:~/home$ ls -l
+total 0
+-rw-r--r-- 1 pahim_b pahim_b 0 Oct  3 05:35 demo.txt
+pahim_b:~/home$ chmod 764 demo.txt
+pahim_b:~/home$ ls -l
+total 0
+-rwxrw-r-- 1 pahim_b pahim_b 0 Oct  3 05:35 demo.txt
+pahim_b:~/home$
